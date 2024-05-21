@@ -9,7 +9,7 @@ from mojap_metadata.converters.glue_converter import GlueConverter
 from dataengineeringutils3.s3 import (
     copy_s3_folder_contents_to_new_folder,
 )
-
+LAND_BUCKET
 S3_BUCKET_NAME = "airflow-intro-test-murad"
 S3_FOLDER_PATH = "loaded_data/"
 CURATED_FOLDER_PATH = "curated_data/"
