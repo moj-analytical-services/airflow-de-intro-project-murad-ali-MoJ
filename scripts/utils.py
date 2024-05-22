@@ -20,5 +20,18 @@ def s3_path_join(base: str, *url_parts: str) -> str:
         base = ensure_trailing_slash(base)
 
     return base
+def s3_path_creator(bucket_name:str,*folders:str):
+    base_path =f"s3://{bucket_name}/"
+    for folder in folders:
+        base_path += folder +'/'
+    return base_path.strip('/')
+        
+    
+
+
+def part_in_file(file_path):
+    file_name = file_path.split('/')[-1]
+    return "part" in file_name
+
 
 
